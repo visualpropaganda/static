@@ -1,0 +1,24 @@
+footer {
+	/* based on document base */
+	font-size: 0.75em;
+	line-height: 2em;
+}
+
+row2 {
+	/* based on footer */
+	font-size: 0.916667em;
+	line-height: 2.181818em;
+}
+
+footer h3 {
+	/* based on footer */
+	font-size: 1.333333em;
+	line-height: 1.5em;
+}
+
+communication {
+	/* based on footer */
+	font-size: 1em;
+	line-height: 2em;
+}
+
