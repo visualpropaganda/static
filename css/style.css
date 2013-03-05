@@ -546,6 +546,15 @@ h2 {
   text-transform: uppercase; }
 
 h3 {
+  font-size: 1.125em;
+  /* 18px */
+  line-height: 1.333333em;
+  /* 24px */
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase; }
+
+h4 {
   font-size: 1em;
   /* 16px */
   line-height: 1.5em;
@@ -562,13 +571,15 @@ p {
   /* 24px */
   margin: 0 0 1.5em 0; }
 
-.class-for-11px {
+.meta {
   font-size: 0.6875em;
   /* 11px */
   line-height: 2.1818em;
   /* 24px */
-  margin-top: 2.1818em;
-  margin-bottom: 0em; }
+  margin-top: 0;
+  margin-bottom: 1.0909em;
+  color: #6c6d6d;
+  font-style: italic; }
 
 .class-for-12px {
   font-size: 0.75em;
@@ -595,27 +606,21 @@ body {
   color: #221919; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #6a7f10;
+  border-bottom: 1px dashed #6a7f10; }
   a:hover {
-    padding-bottom: 1px;
-    border-bottom: 1px solid white;
-    text-decoration: none; }
+    color: #e55a2d;
+    border-bottom: 1px solid #e55a2d; }
 
-#content, aside {
-  background-color: transparent; }
+p.readmore {
+  margin: -0.75em 0 2.25em; }
 
 aside {
-  padding: 0 2.60417%; }
+  padding: 0 2.60417%;
+  background-color: #fdfcec; }
   aside li {
-    list-style: none;
-    width: 31.57552%;
-    margin-right: 2.60417%;
-    float: left; }
-    aside li:last-child {
-      margin-right: 0; }
-  aside a {
-    color: #221919;
-    text-decoration: none; }
+    list-style: none; }
 
 #sub-nav {
   font-size: 0.75em;
@@ -633,9 +638,10 @@ aside {
       padding-right: 0; }
 
 #sub-nav a {
-  color: #32362e; }
+  color: #32362e;
+  border: 0; }
   #sub-nav a:hover {
-    text-decoration: none;
+    background: transparent;
     border-bottom: 1px solid #4c5245;
     padding-bottom: 1px; }
 
@@ -676,10 +682,11 @@ form.search fieldset input[type="submit"]:active {
     #main-nav ul li:hover, #main-nav ul li:focus {
       background: #283e12; }
     #main-nav ul li a {
-      color: #fff; }
-      #main-nav ul li a:hover, #main-nav ul li a:focus {
-        text-decoration: none;
-        border: 0; }
+      color: #fff;
+      border: 0;
+      padding: 0; }
+      #main-nav ul li a:hover {
+        background: transparent; }
 
 #main-nav ul ul {
   position: absolute;
@@ -708,9 +715,11 @@ form.search fieldset input[type="submit"]:active {
   width: 8em;
   line-height: 1em; }
   #branding a {
-    color: #32362e; }
+    color: #32362e;
+    border: 0;
+    padding: 0; }
     #branding a:hover {
-      border: 0; }
+      background: transparent; }
 
 #branding #one, #branding #two {
   font-size: 0.666667em;
@@ -722,20 +731,64 @@ form.search fieldset input[type="submit"]:active {
   /* 16px */
   line-height: 1.2em; }
 
-#content .flexslider, aside .flexslider {
+#content .flexslider {
   margin: 1em auto 4em;
   border: 0; }
+
+#content .flex-control-nav {
+  bottom: -25px; }
 
 header[role="heading"] {
   position: absolute; }
 
 #tagline {
-  width: 99%;
+  text-align: center;
+  color: #32362e;
+  width: 98%;
   position: relative;
   background: #edd290;
   padding: 2%;
   margin-left: -2%;
-  margin-top: -7em; }
+  margin-top: -6em; }
+  #tagline span {
+    font-size: 0.75em;
+    line-height: 1em; }
+
+#news h2 > a, #events h2 > a, #herogallery h2 > a {
+  color: #221919;
+  padding-bottom: 0;
+  border: 0; }
+  #news h2 > a:hover, #events h2 > a:hover, #herogallery h2 > a:hover {
+    padding-bottom: 0;
+    border: 0; }
+
+.frontpage aside h3 {
+  color: #6a7f10;
+  margin-bottom: 0; }
+  .frontpage aside h3 a {
+    padding: 0;
+    border: 0; }
+    .frontpage aside h3 a:hover {
+      color: #e55a2d; }
+
+#events .date {
+  width: 12%;
+  text-align: right;
+  float: left;
+  margin: -0.25em 1.5em 0 0;
+  padding: 0.5em 1em 0.5em 0;
+  border-right: 1px dashed #6a7f10; }
+  #events .date li.day-month {
+    color: #6c6d6d;
+    font-weight: bold;
+    font-size: 1.25em;
+    /* 18px */
+    line-height: 0.75em; }
+  #events .date li.year {
+    font-style: italic;
+    color: #6c6d6d;
+    font-size: 0.875em;
+    /* 14px */ }
 
 footer {
   background: #111111 url(/img/bg_chalkboard-black-4.jpg) repeat;
@@ -747,8 +800,12 @@ footer {
   /* 24px */
   letter-spacing: 0.1em; }
   footer a {
-    color: #eeeeee; }
+    color: #eeeeee;
+    border: 0;
+    padding: 0; }
     footer a:hover {
+      background: transparent;
+      padding-bottom: 1px;
       border-bottom: 1px solid #bbbbbb; }
   footer h3 {
     font-size: 1.333333em;
