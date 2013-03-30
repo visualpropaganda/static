@@ -35,11 +35,13 @@ body {
 
 ::-moz-selection {
     background: #a4be30;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
     background: #a4be30;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -93,6 +95,11 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+@import "../fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss";
 
 /* ==========================================================================
    GGS Aldenhoven custom styles
@@ -160,6 +167,7 @@ p {
   font-size: 1em; /* 16px */
   line-height: 1.5em; /* 24px */
   margin: 0 0 1.5em 0;
+  width: 100%;
 }
 
 
@@ -232,10 +240,6 @@ aside {
     background-color: $bg_content;
     li {
         list-style: none;
-        // width: $column;
-        // margin-right: $gutter;
-        // &:last-child {margin-right: 0};
-        // float: left;
     }
 }
 
@@ -282,25 +286,48 @@ form.search fieldset input[type="text"] {
     border: 1px solid lighten($navtext,40%);
     background: #f5f5f5;
     }
-form.search fieldset input[type="submit"] {
+form.search button.btn-search {
     width: 2em;
-    padding: 0.4em;
+    padding: 0.4em 0.4em 0.4em 0.3em;
     margin-left: -0.35em;
     border: 1px solid lighten($navtext,40%);
-    background: $bg_nav url(/img/gemicons/6.png) center center no-repeat;
-    text-indent: -9999;
+    background: $bg_nav;
+    i {
+        color: #fff;
+        line-height: 1.2em;
+        vertical-align: baseline;
     }
-form.search fieldset input[type="submit"]:hover,
-form.search fieldset input[type="submit"]:focus {
-    background: darken($bg_nav,10%) url(/img/gemicons/6.png) center center no-repeat;
-    }
-form.search fieldset input[type="submit"]:active {
-    background: darken($bg_nav,10%) url(/img/gemicons/6.png) center center no-repeat;
-    }               
+}
+
+form.search button.btn-search:hover, 
+form.search button.btn-search:focus,
+form.search button.btn-search:active {
+    background: darken($bg_nav,10%);
+}
+
+
+// form.search fieldset input[type="submit"] {
+//     width: 2em;
+//     padding: 0.4em;
+//     margin-left: -0.35em;
+//     border: 1px solid lighten($navtext,40%);
+//     background: $bg_nav url(/img/gemicons/6.png) center center no-repeat;
+//     text-indent: -9999;
+//     }
+// form.search fieldset input[type="submit"]:hover,
+// form.search fieldset input[type="submit"]:focus {
+//     background: darken($bg_nav,10%) url(/img/gemicons/6.png) center center no-repeat;
+//     }
+// form.search fieldset input[type="submit"]:active {
+//     background: darken($bg_nav,10%) url(/img/gemicons/6.png) center center no-repeat;
+//     }               
 
 
 // Main-Nav
-#main-nav {margin-top: 2.5em;}
+#main-nav {
+    margin-top: 2.5em;
+    font-size: 0.875em; /* 14 px */
+}
 #main-nav ul {
     float: right;
     li {
@@ -405,17 +432,6 @@ header[role="heading"] {
 
 
 // features
-
-#news h2>a, #events h2>a, #herogallery h2>a,{
-    color: $bodytext;
-    padding-bottom: 0;
-    border: 0;
-    &:hover {
-        padding-bottom: 0;
-        border: 0;
-    }
-}
-
 .frontpage aside h3 {
     color: $texthead;
     margin-bottom: 0;
@@ -426,6 +442,32 @@ header[role="heading"] {
             color: $hover;
         }
     }
+}
+
+.frontpage aside h2 span {
+    font-size: 0.666667em;  /* 16 */
+    line-height: 1.5em;
+    // vertical-align: top;
+    // margin-top: -0.2em;
+}
+
+.link-to {
+    margin-bottom: 3em;
+        a {
+        color: $textmeta;
+        font-weight: bold;
+        font-size: 14px;
+        font-size: 0.875em;
+        border: 0;
+        padding: 0;
+        &:hover {
+            color: $hover;
+        }
+    }
+}
+
+#news li:last-child p.readmore {
+    margin-bottom: 1.5em;
 }
 
 #events .date {
@@ -450,6 +492,14 @@ header[role="heading"] {
     }
 }
 
+
+#frontgallery li {
+    display: block;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+}
 
 // F O O T E R
 footer {
