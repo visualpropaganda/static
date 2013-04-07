@@ -36,86 +36,83 @@
         <!--[if (lt IE 9) & (!IEMobile)]>
             <script src="js/selectivizr-min.js"></script>
         <![endif]-->
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/modernizr-2.6.2.min.js"></script>
     </head>
-    <body id="menu-open">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+    <body id="menuopen">
+        <div class="wrapper frontpage" id="menuclose">
+            <div id="headermeta">
+                <div id="skiplinks" class="visuallyhidden">
+                    <ul>
+                        <li><a href="#main-nav">Zur Hauptnavigation</a><span> . </span></li>
+                        <li><a href="#content">Zum Inhalt</a><span> . </span></li>
+                        <li><a href="#siteinfo">Zu den Kontakt-Informationen</a><span> . </span></li>
+                    </ul>           
+                </div>
+                <!-- End skiplinks -->
 
-        <div class="grid frontpage" id="menu-close">
-            <div id="skiplinks" class="visuallyhidden">
-                <ul>
-                    <li><a href="#main-nav">Zur Hauptnavigation</a><span> . </span></li>
-                    <li><a href="#content">Zum Inhalt</a><span> . </span></li>
-                    <li><a href="#siteinfo">Zu den Kontakt-Informationen</a><span> . </span></li>
-                </ul>           
+                <div id="metanav" class="cf">
+                    <ul>
+                        <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
+                        <li><a href="impressum.php" title="Impressum">Impressum &amp; Datenschutzerklärung</a></li>
+                        <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
+                    </ul>
+                </div>
+                <!-- End metanav -->
+            
+                <form id="headersearch" action="/" class="search cf">
+                    <fieldset>
+                        <input type="text" placeholder="Suchbegriff" />
+                        <!-- <input type="submit" value="Suchen" /> -->
+                        <button type="submit" class="btn-search"><i class="icon-search"></i><span class="visuallyhidden">Suche</span></button>
+                    </fieldset>
+                </form>
+                <!-- End headersearch -->
             </div>
-            <!-- End skiplinks -->
-
-             <div id="sub-nav" class="cf">
-                <ul>
-                    <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
-                    <li><a href="impressum.php" title="Impressum">Impressum &amp; Datenschutzerklärung</a></li>
-                    <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
-                </ul>
-            </div>
-            <!-- End sub-nav -->
-
-            <form action="/" class="search cf">
-                <fieldset>
-                    <input type="text" placeholder="Suchbegriff" />
-                    <!-- <input type="submit" value="Suchen" /> -->
-                    <button type="submit" class="btn-search"><i class="icon-search"></i><span class="visuallyhidden">Suche</span></button>
-                </fieldset>
-            </form>
-            <!-- End Form -->
+            <!-- End header-meta -->
 
             <header role="banner">
-                <h1 id="branding"><a href="index.php" title="Home"><span id="one">Gemeinschafts-</span> <span id="two">grundschule</span> <span id="three">Aldenhoven</span> <span id="four">Offene Ganztagesschule</span></a></h1>
-
-                <div class="menu-btn">
-                    <a  class="open" href="#menu-open"><i class="icon-reorder"></i></a>
-                    <a  class="close" href="#menu-close"><i class="icon-reorder"></i></a>
+                <h1 id="branding"><a href="index.php" title="Home"><span id="one">Gemeinschafts-</span><span id="two">grundschule</span> <span id="three">Aldenhoven</span></br><span id="four">Offene Ganztagesschule</span></a></h1>
+                <div class="menubtn" aria-hidden="true">
+                    <a class="open" href="#menuopen"><i class="icon-reorder icon-2x"></i></a>
+                    <a class="close" href="#"><i class="icon-remove icon-2x"></i></a>
                 </div>
-
-                <nav id="main-nav" role="navigation" class="cf">
-                    <ul class="cf">
-                        <li class="menu-item"><a href="schulprofil.php" title="Schulprofil">Schulprofil</a>
-                            <ul>
-                                <li><a href="ueberuns.php" title="Über Uns">Über Uns</a></li>
-                                <li><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></li>
-                                <li><a href="verwaltung.php" title="Verwaltung">Verwaltung</a></li>
-                                <li><a href="traeger.php" title="Träger">Träger</a></li>
-                                <li><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="schulleben.php" title="Schulleben">Schulleben</a>
-                            <ul>
-                                <li><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></li>
-                                <li><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></li>
-                                <li><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></li>
-                                <li><a href="termine.php" title="Termine">Termine</a></li>
-                                <li><a href="presse.php" title="Presse">Presse</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="freundeundfoerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a>
-                            <ul>
-                                <li><a href="foerderverein.php" title="Förderverein">Förderverein</a></li>
-                                <li><a href="partner.php" title="Partner">Partner</a></li>
-                                <li><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="aktuelles.php" title="Aktuelles">Aktuelles</a></li>
-                        <li class="menu-item"><a href="galerie.php" title="Fotogalerie">Fotogalerie</a></li>
-                    </ul>
-                </nav>
-                <!-- End navigation -->
-
             </header>
             <!-- End header -->
-               
-            <section id="content" class="cf" role="main">
+
+            <nav id="mainnav" role="navigation" class="cf">
+                <ul class="cf">
+                    <li class="dropdowncontrol"><a href="schulprofil.php" title="Schulprofil">Schulprofil</a>
+                        <ul class="dropdown">
+                            <li><a href="ueberuns.php" title="Über Uns">Über Uns</a></li>
+                            <li><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></li>
+                            <li><a href="verwaltung.php" title="Verwaltung">Verwaltung</a></li>
+                            <li><a href="traeger.php" title="Träger">Träger</a></li>
+                            <li><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdowncontrol"><a href="schulleben.php" title="Schulleben">Schulleben</a>
+                        <ul class="dropdown">
+                            <li><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></li>
+                            <li><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></li>
+                            <li><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></li>
+                            <li><a href="termine.php" title="Termine">Termine</a></li>
+                            <li><a href="presse.php" title="Presse">Presse</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdowncontrol"><a href="freundeundfoerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a>
+                        <ul class="dropdown">
+                            <li><a href="foerderverein.php" title="Förderverein">Förderverein</a></li>
+                            <li><a href="partner.php" title="Partner">Partner</a></li>
+                            <li><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdowncontrol"><a href="aktuelles.php" title="Aktuelles">Aktuelles</a></li>
+                    <li class="dropdowncontrol"><a href="galerie.php" title="Fotogalerie">Fotogalerie</a></li>
+                </ul>
+            </nav>
+            <!-- End navigation -->
+
+            <section id="hero" class="cf" role="complementary">
                 <div class="flexslider">
                     <ul class="slides">
                         <li><img src="/img/slider_01.jpg" alt="Slide1"/></li>
@@ -128,30 +125,30 @@
                 <!-- End Flexslider -->
 
                 <header role="heading">
-                    <h1 id="tagline">Herzlich Willkommen <span>auf der Website der Gemeinschaftsgrundschule Aldenhoven</span></h1>
+                    <h1 id="tagline">Herzlich Willkommen</h1>
+                    <h3>auf der Website der GGS Aldenhoven</h3>
                 </header>
-
             </section>
-            <!-- content -->
+            <!-- hero -->
 
-            <aside class="cf">
+            <section id="content" class="cf" role="main">
                 <div id="news">
                     <h2><span>Was gibt es </span>Neues?</h2>
                     <ul>
                         <li>
                             <h3><a href="" title="Beitrag01">Beitrag01 aus dem Schulblog</a></h3>
                             <p class="meta">01. März 2013 von GGS Aldenhoven</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius iste ut enim accusantium voluptates harum corrupti repellendus minus maiores sequi placeat veniam cum omnis itaque porro sed molestiae unde&hellip; </p>
+                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius iste ut enim accusantium voluptates harum corrupti repellendus minus maiores sequi placeat veniam cum omnis itaque porro sed molestiae unde&hellip; </p>
                             <p class="readmore"><a href="">Weiter lesen <i class="icon-double-angle-right"></i></a></p>
                         </li>
                         <li>
                             <h3><a href="" title="Beitrag02">Beitrag02 aus dem Schulblog</a></h3>
                             <p class="meta">01. März 2013 von GGS Aldenhoven</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius iste ut enim accusantium voluptates harum corrupti repellendus minus maiores sequi placeat veniam cum omnis itaque porro sed molestiae unde&hellip; </p>
+                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius iste ut enim accusantium voluptates harum corrupti repellendus minus maiores sequi placeat veniam cum omnis itaque porro sed molestiae unde&hellip; </p>
                             <p class="readmore"><a href="">Weiter lesen <i class="icon-double-angle-right"></i></a></p>
                         </li>
                     </ul>
-                    <p class="link-to"><a href="" title="zu weiteren Beiträgen">Zu weiteren Beiträgen <i class="icon-double-angle-right"></i></a></p>
+                    <p class="linkto"><a href="" title="zu weiteren Beiträgen">Zu weiteren Beiträgen <i class="icon-double-angle-right"></i></a></p>
                 </div>
                 <!-- End news -->
 
@@ -183,7 +180,7 @@
                             <p>Unterrichtsfrei nach der 3. Stunde. KEINE OGS-Betreuung.</p>
                         </li>
                     </ul>
-                    <p class="link-to"><a href="" title="Alle Termine auf einem Blick">Alle Termine auf einem Blick <i class="icon-double-angle-right"></i></a></p>
+                    <p class="linkto"><a href="" title="Alle Termine auf einem Blick">Alle Termine auf einem Blick <i class="icon-double-angle-right"></i></a></p>
                 </div>
                 <!-- End events -->
 
@@ -203,89 +200,114 @@
                             <img src="/img/placeholder.jpg" alt="Bild 4">
                         </li>
                     </ul>
-                    <p class="link-to"><a href="zur Fotogalerie" title="zur Fotogalerie">Zur Fotogalerie <i class="icon-double-angle-right"></i></a></p>
+                    <p class="linkto"><a href="zur Fotogalerie" title="zur Fotogalerie">Zur Fotogalerie <i class="icon-double-angle-right"></i></a></p>
                 </div>
-                <!-- End herogallery -->
+                <!-- End frontgallery -->
 
-            </aside>
+            </section>
         </div>
             
             <footer id="siteinfo" class="cf" role="contentinfo">
-                    <div id="row1" class="cf">
-                        <div id="vcard">
-                            <h3 class="fn org">Gemeinschaftsgrundschule Aldenhoven</h3>
-                            <div class="name">
-                                <h4>Schulleitung:</h4>
-                                <p>Esther Josten</p>
-                                <p>Tanja Fegers (Stellvertretung)</p>
-                            </div>
-                            <div class="adr">
-                                <p class="street-adress">Schwanenstraße 8</p>
-                                <p><span class="postal-code">52457</span><span class="locality">Aldenhoven</span></p>
-                            </div>
-                            <table class="communication">
-                                <tr>
-                                    <td class="tel">Telefon:<span class="type hidden">(Work)</span></td>
-                                    <td class="value">(02464) 8435</td>
-                                </tr>
-                                <tr>
-                                    <td class="tel">Telefax:<span class="type hidden">(Fax)</span></td>
-                                    <td class="value">(02464) 4208</td>
-                                </tr>
-                                <tr>
-                                    <td class="email">Email:</td>
-                                    <td class="value"><a href="mailto:sekretariat@ggsaldenhoven.de"</a>sekretariat@ggsaldenhoven.de</td>
-                                </tr>
-                            </table>
-                            
-                        </div>
-                        <!-- End vcard -->
-    
-                        <div id="secondary-nav">
-                            <ul class="cf">
-                                <li>
-                                    <p class="footer-col-header"><a href="schulprofil.php" title="Schulprofil">Schulprofil</a></p>
-                                    <p><a href="ueberuns.php" title="Über Uns">Über Uns</a></p>
-                                    <p><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></p>
-                                    <p><a href="verwaltung.php" title="">Verwaltung</a></p>
-                                    <p><a href="traeger.php" title="Träger">Träger</a></p>
-                                    <p><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></p>
-                                </li>
-                                <li>
-                                    <p class="footer-col-header"><a href="schulleben.php" title="Schulleben">Schulleben</a></p>
-                                    <p><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></p>
-                                    <p><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></p>
-                                    <p><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></p>
-                                    <p><a href="termine.php" title="Termine">Termine</a></p>
-                                    <p><a href="presse.php" title="Presse">Presse</a></p>
-                                </li>
-                                <li>
-                                    <p class="footer-col-header"><a href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a></p>
-                                    <p><a href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Förderverein</a></p>
-                                    <p><a href="partner.php" title="Partner">Partner</a></p>
-                                    <p><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></p>
-                                </li>
-                                <li>
-                                    <p class="footer-col-header"><a href="fotogalerie.php" title="Fotogalerie">Fotogalerie</a></p>
-                                    <p class="footer-col-header footer-col-header-2"><a href="aktuelles.php" title="Aktuelles">Aktuelles</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End secondary-nav -->
+                <div id="vcard">
+                    <h3 class="fn org">GGS Aldenhoven</h3>
+                    <div class="name">
+                        <p><strong>Schulleitung:</strong></p>
+                        <p>Esther Josten</p>
+                        <p>Tanja Fegers (Stellv.)</p>
                     </div>
-                    <!-- End row1 -->
+                    <div class="adr">
+                        <p class="street-adress">Schwanenstraße 8</p>
+                        <p><span class="postal-code">52457</span><span class="locality">Aldenhoven</span></p>
+                    </div>
+                    <table class="communication">
+                        <tr>
+                            <td class="tel">Telefon:<span class="type hidden">(Work)</span></td>
+                            <td class="value">(02464) 8435</td>
+                        </tr>
+                        <tr>
+                            <td class="tel">Telefax:<span class="type hidden">(Fax)</span></td>
+                            <td class="value">(02464) 4208</td>
+                        </tr>
+                        <tr>
+                            <td class="email">Email:</td>
+                            <td class="value"><a href="mailto:sekretariat@ggsaldenhoven.de"</a>sekretariat@ggsaldenhoven.de</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- End vcard -->
 
-                    <div id="row2">
-                        <ul class="cf">
-                            <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
-                            <li><a href="impressum.php" title="Impressum &amp; Datenschutzerklärung">Impressum &amp; Datenschutzerklärung</a></li>
-                            <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
-                        </ul>
-                        <p>&copy; 2013 Gemeinschaftsgrundschule Aldenhoven &middot; Alle Rechte vorbehalten</p>
-                        <p>Gestaltung &amp; Programmierung: <a href="http://www.sehrausch.de" title="www.sehrausch.de" target="_blank">Sehrausch &mdash; Gestaltung &amp; Fotografie</a></p>
-                    </div>
-                    <!-- End row2 -->
+                <nav id="mobilenav" class="hidden">
+                    <form id="mobilesearch" action="/" class="search cf">
+                        <fieldset>
+                            <input type="text" placeholder="Suchbegriff" />
+                            <!-- <input type="submit" value="Suchen" /> -->
+                            <button type="submit" class="btn-search"><i class="icon-search"></i><span class="visuallyhidden">Suche</span></button>
+                        </fieldset>
+                    </form>
+                    <!-- End mobilesearch -->
+
+                    <ul id="mobtobnav" class="cf">
+                        <li class="mobtopnavitem">
+                            <a class="mobtoplink" href="schulprofil.php" title="Schulprofil">Schulprofil</a>
+                            <ul class="mobsubnav">
+                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
+                                <li class="mobheaderlink"><a href="schulprofil.php" title="Schulprofil">Schulprofil</a></li>
+                                <li><a href="ueberuns.php" title="Über Uns">Über Uns</a></li>
+                                <li><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></li>
+                                <li><a href="verwaltung.php" title="">Verwaltung</a></li>
+                                <li><a href="traeger.php" title="Träger">Träger</a></li>
+                                <li><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobtopnavitem">
+                            <a class="mobtoplink" href="schulleben.php" title="Schulleben">Schulleben</a>
+                            <ul class="mobsubnav">
+                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
+                                <li class="mobheaderlink"><a href="schulleben.php" title="Schulleben">Schulleben</a></li>
+                                <li><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></li>
+                                <li><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></li>
+                                <li><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></li>
+                                <li><a href="termine.php" title="Termine">Termine</a></li>
+                                <li><a href="presse.php" title="Presse">Presse</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobtopnavitem">
+                            <a class="mobtoplink" href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a>
+                            <ul class="mobsubnav">
+                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
+                                <li class="mobheaderlink"><a href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a></li>
+                                <li><a href="foerderverein.php" title="Freunde &amp; Förderer">Förderverein</a></li>
+                                <li><a href="partner.php" title="Partner">Partner</a></li>
+                                <li><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobtopnavitem">
+                            <a class="mobtoplink" href="fotogalerie.php" title="Fotogalerie">Fotogalerie</a>
+                        </li class="mobtopnavitem">
+                        <li >
+                            <a class="mobtoplink" href="aktuelles.php" title="Aktuelles">Aktuelles</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End mobilenav -->
             </footer>
+            <!-- End footer -->
+            <div id="footermeta">
+                <ul class="footermetanav cf">
+                    <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
+                    <li><a href="impressum.php" title="Impressum &amp; Datenschutzerklärung">Impressum &amp; Datenschutzerklärung</a></li>
+                    <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
+                </ul>
+                <!-- End footermetanav -->
+
+                <ul id="legal">
+                    <li>&copy; 2013 Gemeinschaftsgrundschule Aldenhoven &middot; Alle Rechte vorbehalten</li>
+                    <li>Website-Design: <a href="http://www.sehrausch.de" title="www.sehrausch.de" target="_blank">Sehrausch &mdash; Gestaltung &amp; Fotografie</a></li>
+                </ul>
+                <!-- End legal -->
+            </div>
+            <!-- End footermeta -->
+
         
         <!-- ######################### -->
 

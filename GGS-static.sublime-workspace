@@ -4,12 +4,76 @@
 		"selected_items":
 		[
 			[
-				"t",
-				"top	CSS - top: 0;"
+				"padding",
+				"padding-top"
 			],
 			[
 				"margin",
 				"margin-top"
+			],
+			[
+				"in",
+				"inline-table"
+			],
+			[
+				"bg",
+				"bg_footer_meta"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"ho",
+				"hover"
+			],
+			[
+				"nav",
+				"navtext"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"line",
+				"line-height-base"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"type-",
+				"type-ratio"
+			],
+			[
+				"ty",
+				"type-ratio"
+			],
+			[
+				"t",
+				"top	CSS - top: 0;"
 			],
 			[
 				"fff",
@@ -20,10 +84,6 @@
 				"bodytext"
 			],
 			[
-				"text",
-				"textmeta"
-			],
-			[
 				"tex",
 				"textmeta"
 			],
@@ -32,28 +92,12 @@
 				"meta"
 			],
 			[
-				"nav",
-				"bg_nav"
-			],
-			[
 				"fon",
 				"font-weight"
 			],
 			[
-				"bg",
-				"bg_content"
-			],
-			[
 				"i",
 				"italic"
-			],
-			[
-				"font",
-				"font-style"
-			],
-			[
-				"padding",
-				"padding-bottom"
 			],
 			[
 				"di",
@@ -62,10 +106,6 @@
 			[
 				"fl",
 				"float"
-			],
-			[
-				"background",
-				"background-size"
 			],
 			[
 				"blo",
@@ -82,10 +122,6 @@
 			[
 				"no",
 				"no-repeat"
-			],
-			[
-				"border",
-				"border-right"
 			],
 			[
 				"backgr",
@@ -148,10 +184,6 @@
 				"transparent"
 			],
 			[
-				"line",
-				"line-height"
-			],
-			[
 				"inline",
 				"inline-block"
 			],
@@ -167,7 +199,39 @@
 			"file": "sass/style.scss",
 			"settings":
 			{
-				"buffer_size": 16354,
+				"buffer_size": 13299,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_mq-20em.scss",
+			"settings":
+			{
+				"buffer_size": 634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_mq-48em.scss",
+			"settings":
+			{
+				"buffer_size": 134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_media-queries.scss",
+			"settings":
+			{
+				"buffer_size": 3512,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_modular-scale.scss",
+			"settings":
+			{
+				"buffer_size": 1475,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,15 +239,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 42423,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss",
-			"settings":
-			{
-				"buffer_size": 20614,
+				"buffer_size": 40976,
 				"line_ending": "Unix"
 			}
 		},
@@ -191,7 +247,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 17696,
+				"buffer_size": 18660,
 				"line_ending": "Unix"
 			}
 		}
@@ -199,12 +255,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 207.0,
+		"height": 227.0,
 		"selected_items":
 		[
 			[
+				"set scs",
+				"Set Syntax: SCSS"
+			],
+			[
 				"gist",
-				"Gist: Open Gist"
+				"Gist: Create Public Gist"
+			],
+			[
+				"cs",
+				"Set Syntax: CSS"
 			],
 			[
 				"gis",
@@ -340,6 +404,9 @@
 	},
 	"file_history":
 	[
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_mq_48em.scss",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_media-queries",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/js/main.js",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.sass",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/style.scss",
@@ -399,6 +466,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"secondary",
+			"p>",
+			"<p>",
+			"p",
+			".frontpage",
+			"frontpage",
+			"p",
+			"sub",
+			"class=\"hdr-primary\"",
+			"aside",
+			"span",
+			"    \n",
 			"Mehr",
 			"subnavtext",
 			"sub",
@@ -434,7 +513,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -442,15 +521,15 @@
 					"file": "sass/style.scss",
 					"settings":
 					{
-						"buffer_size": 16354,
+						"buffer_size": 13299,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5774,
-								5774
+								5277,
+								5277
 							]
 						],
 						"settings":
@@ -460,17 +539,124 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4637.0,
+						"translation.y": 4383.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "sass/_mq-20em.scss",
+					"settings":
+					{
+						"buffer_size": 634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/_mq-48em.scss",
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/_media-queries.scss",
+					"settings":
+					{
+						"buffer_size": 3512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/_modular-scale.scss",
+					"settings":
+					{
+						"buffer_size": 1475,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								855,
+								845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "css/style.css",
 					"settings":
 					{
-						"buffer_size": 42423,
+						"buffer_size": 40976,
 						"regions":
 						{
 						},
@@ -488,35 +674,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss",
-					"settings":
-					{
-						"buffer_size": 20614,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1152,
-								1152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 27.0,
-						"translation.y": 0.0,
+						"translation.y": 32717.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -528,19 +686,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 17696,
+						"buffer_size": 18660,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3190,
-								3190
+								3857,
+								3857
 							]
 						],
 						"settings":
@@ -550,7 +708,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1248.0,
+						"translation.y": 610.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -586,7 +744,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.4178318446,
 			1.0
 		],
 		"rows":

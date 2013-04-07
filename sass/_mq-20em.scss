@@ -1,0 +1,97 @@
+@media only screen and (min-width: 20em) //320px›
+{
+
+	.wrapper {
+		padding-top: 1px; // collapsing margins verhindern
+		position: relative;
+	}
+
+    #headermeta, #mainnav .dropdown {
+	    display: none;
+	    visibility: hidden;
+    }
+
+    #mainnav {
+    	background: $bg_nav;
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	height: 0.375em;
+    	overflow: hidden;
+    	width: 100%;
+    	margin: 0;
+    }
+
+    #mainnav ul {
+        overflow: hidden;
+        width: 100%;
+        margin: 0.5rem 0;
+        // li {
+        //     // float: left;
+        //     // width: 50%;
+        //     // padding: 0.5rem 0;
+        // }
+    }
+
+    #mainnav .dropdowncontrol a {
+        color: #fff;
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding: 0.5rem 0;
+        margin: 0 auto;
+        border-bottom: 1px solid $bg-html;
+    }
+
+    #mainnav .dropdowncontrol:last-of-type a {
+        border-bottom: 0;
+    }
+
+
+	.menubtn {
+	    display: block;
+	    visibility: visible;
+        margin-top: -3.7rem;
+        margin-bottom: 3.7rem;
+	}
+
+    .open, .close {
+        color: $navtext;
+        position: relative;
+        left: 85%;
+        width: 32px;
+        // padding: 3px 16px 3px 4px;
+        // border: 1px solid $navtext;
+        border: 0;
+        &:hover {
+            color: $navtext;
+            // border: 1px solid $hover;
+            border: 0;
+        };
+    }
+
+    .open {display: block; visibility: visible;}
+    .close {display: none; visibility: hidden;}
+
+    #menuopen:target #mainnav {
+    	height: 13.8125rem;
+    }
+
+    #menuopen:target header[role="banner"] {
+    	margin-top: 13.8125rem;
+    }
+
+    #menuopen:target .open {display: none; visibility: hidden;}
+    #menuopen:target .close {display: block; visibility: visible;}
+
+    #mainnav, header[role="banner"] {
+        -webkit-transition: all .5s ease-in-out;
+           -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+             -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+    }
+}
+// End MediaQuery 20em

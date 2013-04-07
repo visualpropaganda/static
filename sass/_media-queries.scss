@@ -1,0 +1,193 @@
+
+
+/* ------ Desktop -----*/
+
+#meta-nav ul {
+        text-align: right;
+    }
+
+#meta-nav a {
+    color: $navtext;
+    border: 0;
+    &:hover {
+        background: transparent;
+        border-bottom: 1px solid lighten($navtext,10%);
+        padding-bottom: 1px;
+    }
+}
+
+form.search {
+    text-align: right;
+}
+
+// Branding (Logo)
+#branding {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    background: $bg_banner;
+    padding: 1.5em 0.5em 0.5em;
+    width: 8em;
+    line-height: 1em;
+    a {
+        color: $navtext;
+        border: 0;
+        padding: 0;
+        &:hover {
+        background: transparent;
+        }
+    }
+}
+
+#branding #one, #branding #two{
+    font-size: 0.666667em; /* 24px */
+    line-height: 1em;
+    }
+#branding #four {
+    font-size: 0.44444em; /* 16px */
+    line-height: 1.2em;
+    }
+
+
+// Main-Nav
+#main-nav {
+    margin-top: 2.5em;
+}
+#main-nav ul {
+    float: right;
+    li {
+        float: left;
+        padding: 0.5em 1em;
+        background: $bg_nav;
+        border-right: 1px solid $bg_html;
+        &:hover, &:focus {
+            background: darken($bg_nav,10%);
+        };
+        a {
+            color: #fff;
+            border: 0;
+            padding: 0;
+            &:hover {
+                background: transparent;}
+        }
+    }
+}
+
+#main-nav ul ul {
+    position: absolute;
+    display: block;
+    left: -9999px;
+    margin-top: 0.5em;
+    margin-left: -1em;
+    //padding: 0.5em 1em;
+    li {
+    position: relative;
+    float: none;
+    padding: 0.5em 1em;
+    border-top: 1px solid $bg_html;
+    border-right: 0;
+     }
+}
+
+#main-nav li:hover > ul  {
+    display: block;
+    left: auto;
+    z-index: 1;
+}
+
+// tagline
+header[role="heading"] {
+    position: absolute;
+}
+
+#events .date {
+    width: 12%;
+    text-align: right;
+    float: left;
+    margin: -0.25em 1.5em 0 0;
+    padding: 0.5em 1em 0.5em 0;
+    // background: $bg_nav;
+    border-right: 1px dashed $texthead;
+    li.day-month {
+        color: $textmeta;
+        font-weight: bold;
+        font-size: 1.25em; /* 18px */
+        line-height: 0.75em;
+        }
+    li.year {
+        font-style: italic;
+        color: $textmeta;
+        font-size: 0.875em;  /* 14px */
+    }
+}
+
+
+// F O O T E R
+footer {
+    background: $bg_footer url(/img/bg_chalkboard-black-4.jpg) repeat;
+    color: $footertext;
+    padding: 0 $gutter;
+    font-size: 0.75em; /* 12px */
+    line-height: 2em; /* 24px */
+    letter-spacing: 0.1em;
+
+#vcard {
+    float: left;
+    width: $column;
+    margin-right: $gutter;
+    p {
+        margin: 0;
+    }
+}
+
+.adr {
+    margin-top: 1.5em;
+}
+
+.communication {
+    color: $footertext;
+    margin-top: 1.5em;
+    padding: 0 $gutter;
+    font-size: 1em; /* 12px */
+    line-height: 1.5em; /* 24px */
+    letter-spacing: 0.1em;
+    td:first-child {
+        padding-right: $gutter;
+    }
+    a:hover {
+        color: $bg-html;
+        border-bottom: 1px solid $bg-html;
+        padding-bottom: 1px;
+        text-decoration: none;
+    }
+}
+
+#secondary-nav {
+    @extend #vcard;
+    width: ($column*2)+$gutter;
+        li {
+            float: left;
+            width: 25%;
+            list-style: none;
+        }
+            p {
+                margin-bottom: 0.25em;
+                letter-spacing: 0.1em;
+            }
+}
+
+#secondary-nav p:before {
+    content: "\00BB";
+    padding-right: 1em;
+    }
+
+#secondary-nav .footer-col-header {
+    text-transform: uppercase;
+    &:before {
+        content: "";
+        padding-right: 0;}
+}
+
+#secondary-nav p.footer-col-header-2 {
+    margin-top: 2em;
+}
