@@ -1,0 +1,1 @@
+var size=null;size=$("body:after").val();$("body:after").val()==="twenty"&&$(function(){$("#mobnav").removeClass("hidden");$(".open").click(function(){$("#mobnav").addClass("active")})});

@@ -1,6 +1,5 @@
 @import "normalize.scss";
 
-
 /*
  * HTML5 Boilerplate
  *
@@ -208,6 +207,7 @@ a {
     text-decoration: none;
     color: $textlink;
     border-bottom: 1px dashed $textlink;
+    &:visited {@extend a};
     &:hover {
         background: transparent;
         color: $hover;
@@ -282,16 +282,6 @@ form.search button.btn-search:active {
         }
     }
 }
-
-#branding #one, #branding #two{
-    @include type(5);
-    line-height: 1.5rem;
-    display: inline-block;
-    }
-#branding #four {
-    @include type(7);
-    line-height: 1.2rem;
-    }
 
 .menubtn {
     display: none;
@@ -421,9 +411,10 @@ footer {
     margin: 2rem auto 1rem;
     padding-bottom: 1rem;
     text-align: center;
-    h3 {
+    p.fn {
         margin-top: 0.75rem;
         margin-bottom: 1rem;
+        text-transform: uppercase;
     }
     .name p strong {
         font-weight: bold;
@@ -447,8 +438,8 @@ footer {
     color: $footertext;
     padding: 0 $gutter;
     margin: 1rem auto 0;
-    td:first-child {
-        padding-right: $gutter;
+    td {
+        padding-right: .75rem;
     }
     a { border-bottom: 1px solid $footertext;
         padding-bottom: 1px;

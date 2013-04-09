@@ -1589,7 +1589,7 @@ body {
   width: 96%;
   margin: 0 auto; }
 
-a {
+a, a:visited {
   text-decoration: none;
   color: #6a7f10;
   border-bottom: 1px dashed #6a7f10; }
@@ -1650,17 +1650,6 @@ form.search button.btn-search:active {
     padding: 0; }
     #branding a:hover {
       background: transparent; }
-
-#branding #one, #branding #two {
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 1.5rem;
-  display: inline-block; }
-
-#branding #four {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.2rem; }
 
 .menubtn {
   display: none;
@@ -1753,7 +1742,7 @@ footer {
   color: #eeeeee;
   padding: 0 2.60417%;
   letter-spacing: 0.05rem; }
-  footer a {
+  footer a, footer a:visited {
     color: #eeeeee;
     border: 0;
     padding: 0; }
@@ -1767,9 +1756,10 @@ footer {
   margin: 2rem auto 1rem;
   padding-bottom: 1rem;
   text-align: center; }
-  #vcard h3 {
+  #vcard p.fn {
     margin-top: 0.75rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
   #vcard .name p strong {
     font-weight: bold;
     margin: 0;
@@ -1790,8 +1780,8 @@ footer {
   color: #eeeeee;
   padding: 0 2.60417%;
   margin: 1rem auto 0; }
-  .communication td:first-child {
-    padding-right: 2.60417%; }
+  .communication td {
+    padding-right: .75rem; }
   .communication a {
     border-bottom: 1px solid #eeeeee;
     padding-bottom: 1px; }
@@ -1937,20 +1927,46 @@ h2.hdrprimary {
     Media Queries for Responsive Design.
    ========================================================================== */
 @media only screen and (min-width: 20em) {
+  body:after {
+    content: "twenty"; }
+
+  /* ==========================================================================
+     Mobile Responsive Navigation CSS3 only (Fallback when no JS present)
+     ========================================================================== */
   .wrapper {
     padding-top: 1px;
     position: relative; }
 
-  #headermeta, #mainnav .dropdown {
+  #headermeta, #mainnav ul ul {
     display: none;
     visibility: hidden; }
+
+  #branding {
+    background: #edd290 url(/img/banner_mob.png) 65% 50% no-repeat;
+    background-size: 225px auto;
+    width: 100%;
+    height: 5rem;
+    position: relative; }
+
+  #branding a, #branding #mainnav > ul > li a:hover, #mainnav > ul > li #branding a:hover, #branding #mainnav > ul > li a:visited, #mainnav > ul > li #branding a:visited {
+    border: 0;
+    font: 0/0;
+    text-shadow: none;
+    color: transparent;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px; }
+    #branding a :before, #branding #mainnav > ul > li a:hover :before, #mainnav > ul > li #branding a:hover :before, #branding #mainnav > ul > li a:visited :before, #mainnav > ul > li #branding a:visited :before {
+      content: "";
+      display: block;
+      width: 0; }
 
   #mainnav {
     background: #41661d;
     position: absolute;
     left: 0;
     top: 0;
-    height: 0.375em;
+    height: 0;
     overflow: hidden;
     width: 100%;
     margin: 0; }
@@ -1958,57 +1974,68 @@ h2.hdrprimary {
   #mainnav ul {
     overflow: hidden;
     width: 100%;
-    margin: 0.5rem 0; }
+    margin: 0; }
+    #mainnav ul li {
+      display: inline-block;
+      width: 49%;
+      padding: 0.25rem 0;
+      line-height: 3.0625rem;
+      vertical-align: middle;
+      border-bottom: 1px dashed #a4be30; }
+    #mainnav ul li:nth-of-type(odd) {
+      border-right: 1px dashed #a4be30; }
+    #mainnav ul li:last-of-type {
+      border-bottom: 0; }
 
-  #mainnav .dropdowncontrol a {
+  #mainnav > ul > li a, #mainnav > ul > li a:visited, #mainnav > ul > li a:hover, #mainnav > ul > li a:visited {
     color: #fff;
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    padding: 0.5rem 0;
     margin: 0 auto;
-    border-bottom: 1px solid #a4be30; }
-
-  #mainnav .dropdowncontrol:last-of-type a {
-    border-bottom: 0; }
+    border: 0; }
 
   .menubtn {
     display: block;
     visibility: visible;
-    margin-top: -3.7rem;
-    margin-bottom: 3.7rem; }
+    margin-top: -3.5rem;
+    margin-bottom: 0.8rem; }
 
-  .open, .close {
+  .open, .open:visited, .close:visited, .close, .open:visited, .close:visited {
     color: #32362e;
     position: relative;
-    left: 85%;
+    left: 5%;
     width: 32px;
     border: 0; }
-    .open:hover, .close:hover {
+    .open:hover, .close:hover:visited, .close:hover, .open:hover:visited, .close:hover:visited {
       color: #32362e;
       border: 0; }
+    .open i, .open:visited i, .close:visited i, .close i, .open:visited i, .close:visited i {
+      font-size: 1.6rem;
+      padding: 3px 6px;
+      border: 2px solid #32362e; }
 
-  .open {
+  .open, .open:visited, .close:visited {
     display: block;
     visibility: visible; }
 
-  .close {
+  .close, .open:visited, .close:visited {
     display: none;
     visibility: hidden; }
 
   #menuopen:target #mainnav {
-    height: 13.8125rem; }
+    height: 10.875rem; }
 
   #menuopen:target header[role="banner"] {
-    margin-top: 13.8125rem; }
+    margin-top: 10.875rem; }
 
-  #menuopen:target .open {
+  #menuopen:target .open, #menuopen:target .close:visited {
     display: none;
     visibility: hidden; }
 
-  #menuopen:target .close {
+  #menuopen:target .close, #menuopen:target .open:visited {
     display: block;
     visibility: visible; }
 
@@ -2017,7 +2044,35 @@ h2.hdrprimary {
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; } }
+    transition: all 0.5s ease-in-out; }
+
+  #mainnav {
+    box-shadow: inset 0 -4px 8px 0 rgba(0, 0, 0, 0.55); }
+
+  /* ==========================================================================
+     Mobile Responsive Navigation with jQuery (Off-Canvas)
+     ========================================================================== */
+  /* ==========================================================================
+     Mobile Layout
+     ========================================================================== */
+  #hero .flex-control-nav {
+    bottom: 0.5rem;
+    z-index: 999; }
+    #hero .flex-control-nav a, #hero .flex-control-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-control-nav a:hover, #hero .flex-control-nav #mainnav > ul > li a:visited, #mainnav > ul > li #hero .flex-control-nav a:visited {
+      background: #fff;
+      background: rgba(255, 255, 255, 0.4);
+      border: 0; }
+    #hero .flex-control-nav a.flex-active, #hero .flex-control-nav #mainnav > ul > li a.flex-active:hover, #mainnav > ul > li #hero .flex-control-nav a.flex-active:hover, #hero .flex-control-nav #mainnav > ul > li a.flex-active:visited, #mainnav > ul > li #hero .flex-control-nav a.flex-active:visited {
+      background: #fff;
+      background: rgba(255, 255, 255, 0.8); }
+
+  #hero .flex-direction-nav a, #hero .flex-direction-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:visited, #mainnav > ul > li #hero .flex-direction-nav a:visited {
+    border: 0; }
+    #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:hover:visited, #mainnav > ul > li #hero .flex-direction-nav a:hover:visited {
+      border: 0; } }
+@media only screen and (min-width: 20em) and (max-width: 30em) {
+  #mainnav ul li:nth-of-type(3) {
+    line-height: 1.6rem; } }
 @media only screen and (min-width: 48em) {
   .menubtn {
     display: none;
@@ -2036,7 +2091,7 @@ h2.hdrprimary {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  a,
+  a, a:visited,
   a:visited {
     text-decoration: underline; }
 

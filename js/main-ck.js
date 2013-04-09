@@ -1,1 +1,1 @@
-$(window).load(function(){$(".flexslider").flexslider({animation:"slide"})});
+$(window).load(function(){$(".flexslider").flexslider({animation:"fade"})});$("body:after").val("twenty")&&$(function(){$("#mobnav").removeClass("hidden");$(".open").click(function(){$("#mobnav").addClass("active")})});
