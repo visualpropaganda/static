@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"jquery",
+				"jquery	HTML - Include jQuery"
+			],
+			[
 				"add",
 				"addClass"
 			],
@@ -215,7 +219,7 @@
 			"file": "sass/_mq-20em.scss",
 			"settings":
 			{
-				"buffer_size": 4359,
+				"buffer_size": 4292,
 				"line_ending": "Unix"
 			}
 		},
@@ -252,13 +256,10 @@
 			}
 		},
 		{
-			"contents": "$(window).load(function() {\n  $('.flexslider').flexslider({\n    animation: \"fade\"\n  });\n});\n\nvar $size =null;\n$size=$('body:after').val();\n\nif ($size==='twenty') {\n\n	$(function() {									//run when the DOM is ready\n		$('a.open').click(function() {				//use a class, since your ID gets mangled\n		$('nav#mobnav').addClass('active');			//add the class to the clicked element\n		});\n	});\n\n}	// End if twenty",
 			"file": "js/main.js",
-			"file_size": 404,
-			"file_write_time": 1365443105000000,
 			"settings":
 			{
-				"buffer_size": 404,
+				"buffer_size": 504,
 				"line_ending": "Unix"
 			}
 		},
@@ -266,14 +267,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 18120,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 18063,
 				"line_ending": "Unix"
 			}
 		}
@@ -434,6 +428,7 @@
 	},
 	"file_history":
 	[
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/js/main2.js",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/js/main.js",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_mq_48em.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_media-queries",
@@ -566,8 +561,8 @@
 						"selection":
 						[
 							[
-								258,
-								453
+								475,
+								475
 							]
 						],
 						"settings":
@@ -587,15 +582,15 @@
 					"file": "sass/_mq-20em.scss",
 					"settings":
 					{
-						"buffer_size": 4359,
+						"buffer_size": 4292,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								148
+								95,
+								95
 							]
 						],
 						"settings":
@@ -724,15 +719,15 @@
 					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 404,
+						"buffer_size": 504,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								504,
+								504
 							]
 						],
 						"settings":
@@ -748,7 +743,7 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -756,15 +751,19 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 18120,
+						"buffer_size": 18063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17584,
-								17584
+								17256,
+								17256
+							],
+							[
+								17601,
+								17601
 							]
 						],
 						"settings":
@@ -774,32 +773,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6430.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6209.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

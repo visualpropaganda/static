@@ -541,8 +541,8 @@ textarea {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/FortAwesome-Font-Awesome-13d5dd3/font/fontawesome-webfont.eot?v=3.0.1");
-  src: url("../fonts/FortAwesome-Font-Awesome-13d5dd3/font/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/FortAwesome-Font-Awesome-13d5dd3/font/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../fonts/FortAwesome-Font-Awesome-13d5dd3/font/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  src: url("../fonts/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -1580,12 +1580,15 @@ p.readmore {
   box-sizing: border-box; }
 
 html {
-  background-color: #a4be30; }
+  background: #a4be30; }
 
 body {
   color: #221919; }
 
-#headermeta, #mainnav, #hero, #content {
+.wrapper {
+  background: #a4be30; }
+
+#headermeta, #mainnav, #hero {
   width: 96%;
   margin: 0 auto; }
 
@@ -1599,8 +1602,7 @@ a, a:visited {
     border-bottom: 1px solid #e55a2d; }
 
 #content {
-  padding: 0 2.60417%;
-  background-color: #fdfcec; }
+  padding: 0 2.60417%; }
   #content li {
     list-style: none; }
 
@@ -1702,7 +1704,7 @@ header[role="heading"] {
   margin-bottom: 1rem; }
 
 .linkto {
-  margin-bottom: 3em; }
+  margin-bottom: 1rem; }
   .linkto a {
     color: #6c6d6d;
     font-weight: bold;
@@ -1712,6 +1714,10 @@ header[role="heading"] {
     padding: 0; }
     .linkto a:hover {
       color: #e55a2d; }
+
+#content div {
+  background-color: #fdfcec;
+  padding: 0.5rem 1rem; }
 
 #news li:last-child p.readmore {
   margin-bottom: 1.5rem; }
@@ -1923,32 +1929,54 @@ h2.hdrprimary {
 .cf {
   *zoom: 1; }
 
+.noise {
+  position: relative;
+  z-index: 1; }
+
+.noise:before, .body-noise:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(data:image/png;base64,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); }
+
 /* ==========================================================================
     Media Queries for Responsive Design.
    ========================================================================== */
 @media only screen and (min-width: 20em) {
-  body:after {
-    content: "twenty"; }
+  body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%; }
 
-  /* ==========================================================================
-     Mobile Responsive Navigation CSS3 only (Fallback when no JS present)
-     ========================================================================== */
-  .wrapper {
-    padding-top: 1px;
-    position: relative; }
+  body:after {
+    content: "twenty";
+    display: none; }
 
   #headermeta, #mainnav ul ul {
     display: none;
     visibility: hidden; }
 
+  header[role=banner] {
+    overflow: hidden;
+    background: -webkit-linear-gradient(#f6e8c7, #edd290, #e5be5f);
+    background: -moz-linear-gradient(#f6e8c7, #edd290, #e5be5f);
+    background: -o-linear-gradient(#f6e8c7, #edd290, #e5be5f);
+    background: -ms-linear-gradient(#f6e8c7, #edd290, #e5be5f);
+    background: linear-gradient(#f6e8c7, #edd290, #e5be5f); }
+
   #branding {
-    background: #edd290 url(/img/banner_mob.png) 65% 50% no-repeat;
+    background: url(../img/banner_mob.png) 65% 50% no-repeat;
     background-size: 225px auto;
     width: 100%;
     height: 5rem;
-    position: relative; }
+    position: relative;
+    padding-left: 25%; }
 
-  #branding a, #branding #mainnav > ul > li a:hover, #mainnav > ul > li #branding a:hover, #branding #mainnav > ul > li a:visited, #mainnav > ul > li #branding a:visited {
+  #branding a, #branding .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li #branding a:hover, #branding .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li #branding a:visited {
     border: 0;
     font: 0/0;
     text-shadow: none;
@@ -1956,66 +1984,30 @@ h2.hdrprimary {
     overflow: hidden;
     /* IE 6/7 fallback */
     *text-indent: -9999px; }
-    #branding a :before, #branding #mainnav > ul > li a:hover :before, #mainnav > ul > li #branding a:hover :before, #branding #mainnav > ul > li a:visited :before, #mainnav > ul > li #branding a:visited :before {
+    #branding a :before, #branding .no-js #mainnav > ul > li a:hover :before, .no-js #mainnav > ul > li #branding a:hover :before, #branding .no-js #mainnav > ul > li a:visited :before, .no-js #mainnav > ul > li #branding a:visited :before {
       content: "";
       display: block;
       width: 0; }
-
-  #mainnav {
-    background: #41661d;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 0;
-    overflow: hidden;
-    width: 100%;
-    margin: 0; }
-
-  #mainnav ul {
-    overflow: hidden;
-    width: 100%;
-    margin: 0; }
-    #mainnav ul li {
-      display: inline-block;
-      width: 49%;
-      padding: 0.25rem 0;
-      line-height: 3.0625rem;
-      vertical-align: middle;
-      border-bottom: 1px dashed #a4be30; }
-    #mainnav ul li:nth-of-type(odd) {
-      border-right: 1px dashed #a4be30; }
-    #mainnav ul li:last-of-type {
-      border-bottom: 0; }
-
-  #mainnav > ul > li a, #mainnav > ul > li a:visited, #mainnav > ul > li a:hover, #mainnav > ul > li a:visited {
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin: 0 auto;
-    border: 0; }
 
   .menubtn {
     display: block;
     visibility: visible;
     margin-top: -3.5rem;
-    margin-bottom: 0.8rem; }
+    margin-bottom: 1rem; }
 
   .open, .open:visited, .close:visited, .close, .open:visited, .close:visited {
-    color: #32362e;
+    color: #41661d;
     position: relative;
     left: 5%;
     width: 32px;
     border: 0; }
     .open:hover, .close:hover:visited, .close:hover, .open:hover:visited, .close:hover:visited {
-      color: #32362e;
+      color: #41661d;
       border: 0; }
     .open i, .open:visited i, .close:visited i, .close i, .open:visited i, .close:visited i {
       font-size: 1.6rem;
       padding: 3px 6px;
-      border: 2px solid #32362e; }
+      border: 2px solid #41661d; }
 
   .open, .open:visited, .close:visited {
     display: block;
@@ -2025,51 +2017,263 @@ h2.hdrprimary {
     display: none;
     visibility: hidden; }
 
-  #menuopen:target #mainnav {
+  /* ==========================================================================
+     Mobile Responsive Navigation CSS3 only (Fallback when no JS present)
+     ========================================================================== */
+  .no-js .wrapper {
+    padding-top: 1px;
+    position: relative; }
+
+  .no-js #mainnav {
+    background: #41661d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0; }
+
+  .no-js #mainnav ul {
+    overflow: hidden;
+    width: 100%;
+    margin: 0; }
+    .no-js #mainnav ul li {
+      display: inline-block;
+      width: 49%;
+      padding: 0.25rem 0;
+      line-height: 3.0625rem;
+      vertical-align: middle;
+      border-bottom: 1px dashed #a4be30; }
+    .no-js #mainnav ul li:nth-of-type(odd) {
+      border-right: 1px dashed #a4be30; }
+    .no-js #mainnav ul li:last-of-type {
+      border-bottom: 0; }
+
+  .no-js #mainnav > ul > li a, .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li a:visited {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 0 auto;
+    border: 0; }
+
+  .no-js #menuopen:target #mainnav {
     height: 10.875rem; }
 
-  #menuopen:target header[role="banner"] {
+  .no-js #menuopen:target header[role="banner"] {
     margin-top: 10.875rem; }
 
-  #menuopen:target .open, #menuopen:target .close:visited {
+  .no-js #menuopen:target .open, .no-js #menuopen:target .close:visited {
     display: none;
     visibility: hidden; }
 
-  #menuopen:target .close, #menuopen:target .open:visited {
+  .no-js #menuopen:target .close, .no-js #menuopen:target .open:visited {
     display: block;
     visibility: visible; }
 
-  #mainnav, header[role="banner"] {
+  .no-js #mainnav, header[role="banner"] {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
 
-  #mainnav {
+  .no-js #mainnav {
     box-shadow: inset 0 -4px 8px 0 rgba(0, 0, 0, 0.55); }
 
   /* ==========================================================================
      Mobile Responsive Navigation with jQuery (Off-Canvas)
      ========================================================================== */
+  .js .wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s linear;
+    -moz-transition: -moz-transform 0.3s linear;
+    -ms-transition: -ms-transform 0.3s linear;
+    -o-transition: 0 -transform 0.3s linear;
+    transition: transform 0.3s linear;
+    box-shadow: -2px 0 8px 2px rgba(0, 0, 0, 0.3); }
+
+  .mobilemenu {
+    overflow: hidden;
+    -webkit-transform: translateX(61.80469%);
+    -moz-transform: translateX(61.80469%);
+    -ms-transform: translateX(61.80469%);
+    -o-transform: translateX(61.80469%);
+    transform: translateX(61.80469%); }
+
+  .js #mobnav {
+    background: #41661d;
+    display: none;
+    width: 61.8046875%;
+    top: 0;
+    left: 0;
+    text-align: left;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1; }
+
+  .js #mobnav.active {
+    display: block; }
+
+  .js #mobsearch {
+    margin: 0;
+    padding: 0.625rem 5.05625%;
+    border-bottom: 1px solid #92aa2b; }
+    .js #mobsearch:after {
+      position: absolute;
+      font-family: FontAwesome;
+      top: 1rem;
+      right: 10.640627%;
+      color: #999;
+      content: "\f002"; }
+    .js #mobsearch input[type="text"] {
+      -webkit-appearance: none;
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      line-height: 1.5rem;
+      box-shadow: inset 0px 1px 6px #999999;
+      outline: none;
+      padding: 4px 30px 3px 7px;
+      position: relative; }
+    .js #mobsearch button[type="submit"] {
+      display: none;
+      visibility: hidden; }
+
+  .js #mobnav > ul {
+    margin: 0;
+    background: #a4be30; }
+
+  .js #mobnav > ul > li {
+    background: #41661d;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 1px;
+    position: relative; }
+    .js #mobnav > ul > li a, .js #mobnav > ul > li .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .js #mobnav > ul > li a:hover, .js #mobnav > ul > li .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li .js #mobnav > ul > li a:visited, .js #mobnav > ul > li a:hover, .js #mobnav > ul > li .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .js #mobnav > ul > li a:hover, .js #mobnav > ul > li .no-js #mainnav > ul > li a:hover:visited, .no-js #mainnav > ul > li .js #mobnav > ul > li a:hover:visited {
+      display: block;
+      color: #fff;
+      padding: 0.625rem 5.05625% 0.625rem;
+      text-transform: uppercase;
+      border: 0; }
+
+  .js #mobnav > ul > li > a:before {
+    display: none;
+    color: #a4be30;
+    position: absolute;
+    top: 0.6rem;
+    left: 87%;
+    font-family: FontAwesome;
+    content: "\f078";
+    padding-right: 5%; }
+
+  .js #mobnav > ul > li > a.icon:before {
+    display: block; }
+
+  .js #mobnav ul ul {
+    background: #5a8e28;
+    display: none;
+    margin: 0;
+    box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.5); }
+    .js #mobnav ul ul li a, .js #mobnav .no-js #mainnav > ul > li ul li a:hover, .no-js .js #mobnav #mainnav > ul > li ul li a:hover, .js #mobnav .no-js #mainnav > ul > li ul li a:visited, .no-js .js #mobnav #mainnav > ul > li ul li a:visited, .js #mobnav ul ul li a:hover, .js #mobnav .no-js #mainnav > ul > li ul li a:hover, .no-js .js #mobnav #mainnav > ul > li ul li a:hover, .js #mobnav .no-js #mainnav > ul > li ul li a:hover:visited, .no-js .js #mobnav #mainnav > ul > li ul li a:hover:visited {
+      display: block;
+      width: 100%;
+      text-transform: none;
+      padding-bottom: 0.3125rem;
+      border-bottom: 1px dashed #41661d; }
+    .js #mobnav ul ul li:last-of-type a, .js #mobnav .no-js #mainnav > ul > li ul li:last-of-type a:hover, .no-js .js #mobnav #mainnav > ul > li ul li:last-of-type a:hover, .js #mobnav .no-js #mainnav > ul > li ul li:last-of-type a:visited, .no-js .js #mobnav #mainnav > ul > li ul li:last-of-type a:visited, .js #mobnav ul ul li:last-of-type a:hover, .js #mobnav .no-js #mainnav > ul > li ul li:last-of-type a:hover, .no-js .js #mobnav #mainnav > ul > li ul li:last-of-type a:hover, .js #mobnav .no-js #mainnav > ul > li ul li:last-of-type a:hover:visited, .no-js .js #mobnav #mainnav > ul > li ul li:last-of-type a:hover:visited {
+      border: 0;
+      padding-bottom: 0.625rem; }
+    .js #mobnav ul ul li a:before, .js #mobnav .no-js #mainnav > ul > li ul li a:hover:before, .no-js .js #mobnav #mainnav > ul > li ul li a:hover:before, .js #mobnav .no-js #mainnav > ul > li ul li a:visited:before, .no-js .js #mobnav #mainnav > ul > li ul li a:visited:before {
+      content: "\00BB";
+      padding-right: 5%; }
+
+  .js #mobnav ul.mobdropdown {
+    display: block; }
+
+  .js #mobnav > ul > li.mobnavmeta, .mobnavmeta {
+    background: #555555;
+    border-bottom: 1px solid #333333; }
+    .js #mobnav > ul > li.mobnavmeta a, .js #mobnav > ul > li.mobnavmeta .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .js #mobnav > ul > li.mobnavmeta a:hover, .js #mobnav > ul > li.mobnavmeta .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li .js #mobnav > ul > li.mobnavmeta a:visited, .js #mobnav > ul > li.mobnavmeta a:hover, .js #mobnav > ul > li.mobnavmeta .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .js #mobnav > ul > li.mobnavmeta a:hover, .js #mobnav > ul > li.mobnavmeta .no-js #mainnav > ul > li a:hover:visited, .no-js #mainnav > ul > li .js #mobnav > ul > li.mobnavmeta a:hover:visited, .mobnavmeta a, .mobnavmeta .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .mobnavmeta a:hover, .mobnavmeta .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li .mobnavmeta a:visited, .mobnavmeta a:hover, .mobnavmeta .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li .mobnavmeta a:hover, .mobnavmeta .no-js #mainnav > ul > li a:hover:visited, .no-js #mainnav > ul > li .mobnavmeta a:hover:visited {
+      color: #aeaeae; }
+
   /* ==========================================================================
      Mobile Layout
      ========================================================================== */
   #hero .flex-control-nav {
     bottom: 0.5rem;
     z-index: 999; }
-    #hero .flex-control-nav a, #hero .flex-control-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-control-nav a:hover, #hero .flex-control-nav #mainnav > ul > li a:visited, #mainnav > ul > li #hero .flex-control-nav a:visited {
+    #hero .flex-control-nav a, #hero .flex-control-nav .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li #hero .flex-control-nav a:hover, #hero .flex-control-nav .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li #hero .flex-control-nav a:visited {
       background: #fff;
       background: rgba(255, 255, 255, 0.4);
       border: 0; }
-    #hero .flex-control-nav a.flex-active, #hero .flex-control-nav #mainnav > ul > li a.flex-active:hover, #mainnav > ul > li #hero .flex-control-nav a.flex-active:hover, #hero .flex-control-nav #mainnav > ul > li a.flex-active:visited, #mainnav > ul > li #hero .flex-control-nav a.flex-active:visited {
+    #hero .flex-control-nav a.flex-active, #hero .flex-control-nav .no-js #mainnav > ul > li a.flex-active:hover, .no-js #mainnav > ul > li #hero .flex-control-nav a.flex-active:hover, #hero .flex-control-nav .no-js #mainnav > ul > li a.flex-active:visited, .no-js #mainnav > ul > li #hero .flex-control-nav a.flex-active:visited {
       background: #fff;
       background: rgba(255, 255, 255, 0.8); }
 
-  #hero .flex-direction-nav a, #hero .flex-direction-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:visited, #mainnav > ul > li #hero .flex-direction-nav a:visited {
+  #hero .flex-direction-nav a, #hero .flex-direction-nav .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav .no-js #mainnav > ul > li a:visited, .no-js #mainnav > ul > li #hero .flex-direction-nav a:visited {
     border: 0; }
-    #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:hover, #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav #mainnav > ul > li a:hover:visited, #mainnav > ul > li #hero .flex-direction-nav a:hover:visited {
-      border: 0; } }
+    #hero .flex-direction-nav a:hover, #hero .flex-direction-nav .no-js #mainnav > ul > li a:hover, .no-js #mainnav > ul > li #hero .flex-direction-nav a:hover, #hero .flex-direction-nav .no-js #mainnav > ul > li a:hover:visited, .no-js #mainnav > ul > li #hero .flex-direction-nav a:hover:visited {
+      border: 0; }
+
+  #hero .flexslider {
+    margin: 0.75rem 0; }
+
+  header[role=heading] {
+    display: none;
+    visibility: hidden; }
+
+  #content div {
+    margin-bottom: 0.5rem;
+    background: #fdfcec url(../img/notebook_background.jpg) repeat; }
+    #content div h2 {
+      color: #e55a2d;
+      text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+      padding-bottom: 2px;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2); }
+      #content div h2 span {
+        color: #666;
+        text-shadow: 0 0 0 transparent; }
+    #content div h3 {
+      margin-top: 0;
+      font-size: 20px;
+      font-size: 1.25rem; }
+    #content div ul {
+      margin-top: 0; }
+    #content div .linkto {
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2); }
+
+  #content #frontgallery h2 {
+    padding-bottom: 8px; }
+
+  #content #frontgallery #viewport {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    position: relative;
+    padding: 0 0 10px;
+    margin: 0 0 0.5rem; }
+
+  #content #frontgallery ul {
+    width: 940px;
+    overflow: hidden;
+    margin: 0; }
+    #content #frontgallery ul li {
+      display: inline-block;
+      width: 220px;
+      height: auto;
+      background: #fff;
+      padding: 10px;
+      margin: 0 10px 0 0;
+      border: 1px solid #eeeeee; } }
 @media only screen and (min-width: 20em) and (max-width: 30em) {
   #mainnav ul li:nth-of-type(3) {
     line-height: 1.6rem; } }

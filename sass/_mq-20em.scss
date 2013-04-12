@@ -1,31 +1,39 @@
 @media only screen and (min-width: 20em) //320px›
 {
 
-    body:after {
-        content:"twenty";
+    body {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
     }
 
-/* ==========================================================================
-   Mobile Responsive Navigation CSS3 only (Fallback when no JS present)
-   ========================================================================== */
-
-    .wrapper {
-		padding-top: 1px; // collapsing margins verhindern
-		position: relative;
-	}
+    body:after {
+        content:"twenty";
+        display: none;
+    }
 
     #headermeta, #mainnav ul ul {
-	    display: none;
-	    visibility: hidden;
+        display: none;
+        visibility: hidden;
+    }
+
+    header[role=banner] {
+        overflow: hidden;
+        background: -webkit-linear-gradient(scale-color($bg-banner, $lightness: 50%), $bg-banner, scale-color($bg-banner, $lightness: -15%));
+        background: -moz-linear-gradient(scale-color($bg-banner, $lightness: 50%), $bg-banner, scale-color($bg-banner, $lightness: -15%));
+        background: -o-linear-gradient(scale-color($bg-banner, $lightness: 50%), $bg-banner, scale-color($bg-banner, $lightness: -15%));
+        background: -ms-linear-gradient(scale-color($bg-banner, $lightness: 50%), $bg-banner, scale-color($bg-banner, $lightness: -15%));
+        background: linear-gradient(scale-color($bg-banner, $lightness: 50%), $bg-banner, scale-color($bg-banner, $lightness: -15%));
     }
 
     #branding {
-        background: $bg-banner url(/img/banner_mob.png) 65% 50% no-repeat;
+        background: url(../img/banner_mob.png) 65% 50% no-repeat;
         background-size: 225px auto;
         // margin: 0 auto;
         width: 100%;
         height: 5rem;
         position: relative;
+        padding-left: 25%;
     }
 
     #branding a {
@@ -44,7 +52,45 @@
         };
     }
 
-    #mainnav {
+    .menubtn {
+        display: block;
+        visibility: visible;
+        margin-top: -3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .open, .close {
+    color: $bg_nav;
+    position: relative;
+    left: 5%;
+    width: 32px;
+    border: 0;
+    &:visited {@extend .open, .close};
+    &:hover {
+        color: $bg_nav;
+        // border: 1px solid $hover;
+        border: 0;
+        };
+    i {
+        font-size: 1.6rem;
+        padding: 3px 6px;
+        border: 2px solid $bg_nav;
+        }
+    }
+
+    .open {display: block; visibility: visible;}
+    .close {display: none; visibility: hidden;}
+
+/* ==========================================================================
+   Mobile Responsive Navigation CSS3 only (Fallback when no JS present)
+   ========================================================================== */
+
+    .no-js .wrapper {
+        padding-top: 1px; // collapsing margins verhindern
+        position: relative;
+    }
+
+    .no-js #mainnav {
     	background: $bg_nav;
     	position: absolute;
     	left: 0;
@@ -55,7 +101,7 @@
     	margin: 0;
     }
 
-    #mainnav ul {
+    .no-js #mainnav ul {
         overflow: hidden;
         width: 100%;
         margin: 0;
@@ -71,60 +117,30 @@
         li:last-of-type {border-bottom: 0;}
     }
 
-    #mainnav>ul>li a {
+    .no-js #mainnav>ul>li a {
         color: #fff;
         display: block;
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
-        // padding: 0.5rem 0;
         margin: 0 auto;
         border: 0;
         &:hover, &:visited {@extend a};
     }
 
-	.menubtn {
-	    display: block;
-	    visibility: visible;
-        margin-top: -3.5rem;
-        margin-bottom: 0.8rem;
-	}
-
-    .open, .close {
-        color: $navtext;
-        position: relative;
-        left: 5%;
-        width: 32px;
-        border: 0;
-        &:visited {@extend .open, .close};
-        &:hover {
-            color: $navtext;
-            // border: 1px solid $hover;
-            border: 0;
-        };
-        i {
-            font-size: 1.6rem;
-            padding: 3px 6px;
-            border: 2px solid $navtext;
-        }
-    }
-
-    .open {display: block; visibility: visible;}
-    .close {display: none; visibility: hidden;}
-
-    #menuopen:target #mainnav {
+    .no-js #menuopen:target #mainnav {
     	height: 10.875rem;
     }
 
-    #menuopen:target header[role="banner"] {
+    .no-js #menuopen:target header[role="banner"] {
     	margin-top: 10.875rem;
     }
 
-    #menuopen:target .open {display: none; visibility: hidden;}
-    #menuopen:target .close {display: block; visibility: visible;}
+    .no-js #menuopen:target .open {display: none; visibility: hidden;}
+    .no-js #menuopen:target .close {display: block; visibility: visible;}
 
-    #mainnav, header[role="banner"] {
+    .no-js #mainnav, header[role="banner"] {
         -webkit-transition: all .5s ease-in-out;
            -moz-transition: all .5s ease-in-out;
             -ms-transition: all .5s ease-in-out;
@@ -132,21 +148,155 @@
                 transition: all .5s ease-in-out;
     }
 
-    #mainnav {box-shadow: inset 0 -4px 8px 0 rgba(0,0,0,.55);}
+    .no-js #mainnav {box-shadow: inset 0 -4px 8px 0 rgba(0,0,0,.55);}
 
 
 /* ==========================================================================
    Mobile Responsive Navigation with jQuery (Off-Canvas)
    ========================================================================== */
 
+   .js .wrapper  {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: -webkit-transform .3s linear;
+           -moz-transition: -moz-transform .3s linear;
+            -ms-transition: -ms-transform .3s linear;
+             -o-transition: -0-transform .3s linear;
+                transition: transform .3s linear;
+        box-shadow: -2px 0 8px 2px rgba(0,0,0,.3);
+   }
+   
+   .mobilemenu {
+        overflow: hidden;
+        -webkit-transform: translateX(61.8046875%);
+           -moz-transform: translateX(61.8046875%);
+            -ms-transform: translateX(61.8046875%);
+             -o-transform: translateX(61.8046875%);
+                transform: translateX(61.8046875%);
+   }
 
+
+   .js #mobnav {
+        background: $bg-nav;
+        display: none;
+        width: 61.8046875%;  // golden section of 320px = 197.775px
+        top: 0;
+        left: 0;
+        text-align: left;
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+   }
+
+   .js #mobnav.active {
+        display: block;
+   }
+
+   .js #mobsearch {
+        margin: 0;
+        padding: 0.625rem 5.05625079%; //10px 5px
+        border-bottom: 1px solid darken($bg-html,5%);
+        &:after {
+            position: absolute;
+            font-family: FontAwesome;
+            top: 1rem; //16px
+            right: 10.640627%;
+            color: #999;
+            content: "\f002";
+            }
+        input[type="text"] {
+            -webkit-appearance: none;
+            display: block;
+            width: 100%;
+            border-radius: 2px;
+            line-height: 1.5rem;
+            box-shadow: inset 0px 1px 6px #999;
+            outline: none;
+            padding: 4px 30px 3px 7px;
+            position: relative;
+            }
+        button[type="submit"] {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+   .js #mobnav>ul {
+        margin: 0;
+        background: $bg-html;
+   }
+
+   .js #mobnav>ul>li {
+        background: $bg-nav;
+        border-bottom: 1px solid #333;
+        margin-bottom: 1px;
+        position: relative;
+        a, a:hover {
+            display: block;
+            color: #fff;
+            padding: 0.625rem 5.05625079% 0.625rem; //10px 5px 0px
+            text-transform: uppercase;
+            border: 0;
+        }
+   }
+
+   .js #mobnav>ul>li>a:before {
+            display: none;
+            color: $bg-html;
+            position: absolute;
+            top: 0.6rem;
+            left: 87%;
+            font-family: FontAwesome;
+            content: "\f078";
+            padding-right: 5%;
+        }
+   .js #mobnav>ul>li>a.icon:before {
+        display: block;
+    }
+
+   .js #mobnav ul ul {
+        background: lighten($bg-nav,10%);
+        display: none;
+        margin: 0;
+        box-shadow: inset 0 0 8px 2px rgba(0,0,0,0.5);
+        li {
+            // padding: 0.625rem 2.05625079% 0; //10px 5px 0px
+            a, a:hover {
+                display: block;
+                width: 100%;
+                text-transform: none;
+                padding-bottom: 0.3125rem;
+                border-bottom: 1px dashed $bg-nav;
+            }
+            &:last-of-type a, &:last-of-type a:hover {
+                border: 0;
+                padding-bottom: 0.625rem;
+            }
+            a:before {
+            content: "\00BB";
+            padding-right: 5%;
+            }
+        }
+   }
+
+   .js #mobnav ul.mobdropdown {
+    display: block;
+   }
+
+   .js #mobnav>ul>li.mobnavmeta, .mobnavmeta {
+    background: $bg_footer_meta;
+    border-bottom: 1px solid #333;
+    a, a:hover {color: darken($footertext, 25%);}
+   }
 
 
 
 /* ==========================================================================
    Mobile Layout
    ========================================================================== */
-
 
     #hero .flex-control-nav {
         bottom: 0.5rem; //25px
@@ -169,7 +319,68 @@
         }
     }
 
+    #hero .flexslider {margin: 0.75rem 0;}
+    .flexslider .slides {
+        // box-shadow: 2px 2px 6px 0 rgba(0,0,0,.65);
+    }
 
+    header[role=heading] {
+        display: none;
+        visibility: hidden;
+    }
+
+    #content div {
+        margin-bottom: 0.5rem;
+        background: $bg-content url(../img/notebook_background.jpg) repeat;
+        h2 {
+            color: $hover;
+            text-shadow: 3px 2px 0px rgba(0,0,0,0.2);
+            padding-bottom: 2px;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.2);
+            span {
+                color: #666;
+                text-shadow: 0 0 0 transparent;}
+        }
+        h3 {
+            margin-top: 0;
+            @include type(6) // 1.25rem  20px
+        }
+        ul {
+            margin-top: 0;
+        }
+        .linkto {
+            border-top: 1px dashed rgba(0,0,0,0.2);
+            border-bottom: 1px dashed rgba(0,0,0,0.2);
+        }
+    }
+
+    #content #frontgallery h2 {
+        padding-bottom: 8px;
+    }
+
+    #content #frontgallery #viewport{
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        position: relative;
+        padding: 0 0 10px;
+        margin: 0 0 0.5rem;
+    }
+    #content #frontgallery ul {
+        width: 940px;
+        overflow: hidden;
+        margin: 0;
+        li {
+            display: inline-block;
+            width: 220px;
+            height: auto;
+            background: #fff;
+            padding: 10px;
+            margin: 0 10px 0 0;
+            border: 1px solid #eee;
+        }
+    }
 
 
 
@@ -180,7 +391,7 @@
 
         #mainnav ul li:nth-of-type(3) {
             line-height: 1.6rem;
-        };
+        }
 
     } // End MediaQuery 30em
 

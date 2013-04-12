@@ -29,8 +29,8 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/flexslider.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/flexslider.css">
 
         <!--[if (lt IE 9) & (!IEMobile)]>
             <script src="js/selectivizr-min.js"></script>
@@ -38,7 +38,7 @@
         <script src="js/modernizr-2.6.2.min.js"></script>
     </head>
     <body id="menuopen">
-        <div class="wrapper frontpage" id="menuclose">
+        <div class="wrapper frontpage">
             <div id="headermeta">
                 <div id="skiplinks" class="visuallyhidden">
                     <ul>
@@ -52,7 +52,7 @@
                 <div id="metanav" class="cf">
                     <ul>
                         <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
-                        <li><a href="impressum.php" title="Impressum">Impressum &amp; Datenschutzerklärung</a></li>
+                        <li><a href="impressum.php" title="Impressum">Impressum</a></li>
                         <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
             </div>
             <!-- End header-meta -->
 
-            <header role="banner">
+            <header role="banner" class="noise">
                 <h1 id="branding"><a href="index.php" title="GGS Aldenhoven">GGS Aldenhoven</a></h1>
                 <div class="menubtn" aria-hidden="true">
                     <a class="open" href="#menuopen"><i class="icon-reorder"></i></a>
@@ -114,11 +114,11 @@
             <section id="hero" class="cf" role="complementary">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li><img src="/img/slider_01.jpg" alt="Slide1"/></li>
-                        <li><img src="/img/slider_02.jpg" alt="Slide2"/></li>
-                        <li><img src="/img/slider_03.jpg" alt="Slide3"/></li>
-                        <li><img src="/img/slider_04.jpg" alt="Slide4"/></li>
-                        <li><img src="/img/slider_05.jpg" alt="Slide5"/></li>
+                        <li><img src="img/slider_01.jpg" alt="Slide1"/></li>
+                        <li><img src="img/slider_02.jpg" alt="Slide2"/></li>
+                        <li><img src="img/slider_03.jpg" alt="Slide3"/></li>
+                        <li><img src="img/slider_04.jpg" alt="Slide4"/></li>
+                        <li><img src="img/slider_05.jpg" alt="Slide5"/></li>
                     </ul>
                 </div>
                 <!-- End Flexslider -->
@@ -185,27 +185,28 @@
 
                 <div id="frontgallery">
                     <h2><span>Aus unserer </span>Fotogalerie</h2>
-                    <ul>
-                        <li>
-                            <img src="/img/placeholder.jpg" alt="Bild 1">
-                        </li>
-                        <li>
-                            <img src="/img/placeholder.jpg" alt="Bild 2">
-                        </li>
-                        <li>
-                            <img src="/img/placeholder.jpg" alt="Bild 3">
-                        </li>
-                        <li>
-                            <img src="/img/placeholder.jpg" alt="Bild 4">
-                        </li>
-                    </ul>
+                    <div id="viewport">
+                        <ul>
+                            <li>
+                                <img src="img/placeholder_pic1.jpg" alt="Bild 1">
+                            </li>
+                            <li>
+                                <img src="img/placeholder_pic2.jpg" alt="Bild 2">
+                            </li>
+                            <li>
+                                <img src="img/placeholder_pic3.jpg" alt="Bild 3">
+                            </li>
+                            <li>
+                                <img src="img/placeholder_pic4.jpg" alt="Bild 4">
+                            </li>
+                        </ul>
+                    </div>
                     <p class="linkto"><a href="zur Fotogalerie" title="zur Fotogalerie">Zur Fotogalerie <i class="icon-double-angle-right"></i></a></p>
                 </div>
                 <!-- End frontgallery -->
 
             </section>
-        </div>
-            
+
             <footer id="siteinfo" class="cf" role="contentinfo">
                 <div id="vcard">
                     <p class="fn org"><strong>Gemeinschaftsgrundschule Aldenhoven</strong></p>
@@ -234,67 +235,13 @@
                     </table>
                 </div>
                 <!-- End vcard -->
-
-                <nav id="mobnav" class="hidden">
-                    <form id="mobsearch" action="/" class="search cf">
-                        <fieldset>
-                            <input type="text" placeholder="Suchbegriff" />
-                            <!-- <input type="submit" value="Suchen" /> -->
-                            <button type="submit" class="btn-search"><i class="icon-search"></i><span class="visuallyhidden">Suche</span></button>
-                        </fieldset>
-                    </form>
-                    <!-- End mobilesearch -->
-
-                    <ul class="cf">
-                        <li>
-                            <a href="schulprofil.php" title="Schulprofil">Schulprofil</a>
-                            <ul>
-                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
-                                <li class="mobheaderlink"><a href="schulprofil.php" title="Schulprofil">Schulprofil</a></li>
-                                <li><a href="ueberuns.php" title="Über Uns">Über Uns</a></li>
-                                <li><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></li>
-                                <li><a href="verwaltung.php" title="">Verwaltung</a></li>
-                                <li><a href="traeger.php" title="Träger">Träger</a></li>
-                                <li><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="schulleben.php" title="Schulleben">Schulleben</a>
-                            <ul>
-                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
-                                <li class="mobheaderlink"><a href="schulleben.php" title="Schulleben">Schulleben</a></li>
-                                <li><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></li>
-                                <li><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></li>
-                                <li><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></li>
-                                <li><a href="termine.php" title="Termine">Termine</a></li>
-                                <li><a href="presse.php" title="Presse">Presse</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a>
-                            <ul>
-                                <li class="mobbacklink"><a href="#">Hauptmenü</a></li>
-                                <li class="mobheaderlink"><a href="freunde-und-foerderer.php" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a></li>
-                                <li><a href="foerderverein.php" title="Freunde &amp; Förderer">Förderverein</a></li>
-                                <li><a href="partner.php" title="Partner">Partner</a></li>
-                                <li><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="fotogalerie.php" title="Fotogalerie">Fotogalerie</a>
-                        </li>
-                        <li >
-                            <a href="aktuelles.php" title="Aktuelles">Aktuelles</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End mobilenav -->
             </footer>
             <!-- End footer -->
+
             <div id="footermeta">
-                <ul class="footermetanav cf">
+                <ul class="footermetanav">
                     <li><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
-                    <li><a href="impressum.php" title="Impressum &amp; Datenschutzerklärung">Impressum &amp; Datenschutzerklärung</a></li>
+                    <li><a href="impressum.php" title="Impressum">Impressum</a></li>
                     <li><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
                 </ul>
                 <!-- End footermetanav -->
@@ -307,13 +254,68 @@
             </div>
             <!-- End footermeta -->
 
+        </div>
+        <!-- End wrapper  -->           
+
+        <nav id="mobnav" class="hidden">
+            <form id="mobsearch" action="/" class="mobnavmeta noise">
+                <fieldset>
+                    <input type="text" placeholder="Suche" />
+                    <!-- <input type="submit" value="Suchen" /> -->
+                    <button type="submit" class="btn-search"><i class="icon-search"></i><span class="visuallyhidden">Suche</span></button>
+                </fieldset>
+            </form>
+            <!-- End mobilesearch -->
+
+            <ul>
+                <li class="noise">
+                    <a href="#" title="Schulprofil">Schulprofil</a>
+                    <ul>
+                        <li><a href="ueberuns.php" title="Über Uns">Über Uns</a></li>
+                        <li><a href="schulalltag.php" title="Schulalltag">Schulalltag</a></li>
+                        <li><a href="verwaltung.php" title="">Verwaltung</a></li>
+                        <li><a href="traeger.php" title="Träger">Träger</a></li>
+                        <li><a href="elternvertretung.php" title="Elternvertretung">Elternvertretung</a></li>
+                    </ul>
+                </li>
+                <li class="noise">
+                    <a href="#" title="Schulleben">Schulleben</a>
+                    <ul>
+                        <li><a href="aktivitaeten.php" title="Aktivitäten">Aktivitäten</a></li>
+                        <li><a href="elternmitarbeit.php" title="Elternmitarbeit">Elternmitarbeit</a></li>
+                        <li><a href="selbstlernzentrum.php" title="Selbstlernzentrum">Selbstlernzentrum</a></li>
+                        <li><a href="termine.php" title="Termine">Termine</a></li>
+                        <li><a href="presse.php" title="Presse">Presse</a></li>
+                    </ul>
+                </li>
+                <li class="noise">
+                    <a href="#" title="Freunde &amp; Förderer">Freunde &amp; Förderer</a>
+                    <ul>
+                        <li><a href="foerderverein.php" title="Freunde &amp; Förderer">Förderverein</a></li>
+                        <li><a href="partner.php" title="Partner">Partner</a></li>
+                        <li><a href="sponsoren.php" title="Sponsoren">Sponsoren</a></li>
+                    </ul>
+                </li>
+                <li class="noise">
+                    <a href="fotogalerie.php" title="Fotogalerie">Fotogalerie</a>
+                </li>
+                <li class="noise">
+                    <a href="aktuelles.php" title="Aktuelles">Aktuelles</a>
+                </li>
+                <li class="mobnavmeta noise"><a href="kontakt.php" title="Kontakt">Kontakt</a></li>
+                <li class="mobnavmeta noise"><a href="impressum.php" title="Impressum">Impressum</a></li>
+                <li class="mobnavmeta noise"><a href="hilfe-zur-website.php" title="Hilfe zur Website">Hilfe zur Website</a></li>
+            </ul>
+        </nav>
+        <!-- End mobilenav -->
+
         
         <!-- ######################### -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="/js/jquery.flexslider-min.js"></script>
-        <script src="/js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
