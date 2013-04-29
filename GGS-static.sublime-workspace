@@ -4,28 +4,68 @@
 		"selected_items":
 		[
 			[
-				"jquery",
-				"jquery	HTML - Include jQuery"
-			],
-			[
-				"add",
-				"addClass"
+				"margin",
+				"margin-left"
 			],
 			[
 				"border",
-				"border-right"
+				"border-left"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"bg",
+				"bg_nav"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"mar",
+				"margin"
 			],
 			[
 				"box",
 				"box-shadow"
 			],
 			[
-				"background",
-				"background-size"
+				"tran",
+				"transform	CSS - transform: ;"
 			],
 			[
-				"trans",
-				"transition	CSS - transition: ;"
+				"jquery",
+				"jquery	HTML - Include jQuery"
+			],
+			[
+				"add",
+				"addClass"
 			],
 			[
 				"text-",
@@ -40,16 +80,8 @@
 				"padding-top"
 			],
 			[
-				"margin",
-				"margin-top"
-			],
-			[
 				"in",
 				"inline-table"
-			],
-			[
-				"bg",
-				"bg_footer_meta"
 			],
 			[
 				"ce",
@@ -140,16 +172,8 @@
 				"no-repeat"
 			],
 			[
-				"backgr",
-				"background-position"
-			],
-			[
 				"wi",
 				"width"
-			],
-			[
-				"min",
-				"min-width"
 			],
 			[
 				"ab",
@@ -211,7 +235,7 @@
 			"file": "sass/style.scss",
 			"settings":
 			{
-				"buffer_size": 13165,
+				"buffer_size": 15561,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +243,7 @@
 			"file": "sass/_mq-20em.scss",
 			"settings":
 			{
-				"buffer_size": 4292,
+				"buffer_size": 11199,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +275,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 45897,
+				"buffer_size": 56429,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,7 +283,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 504,
+				"buffer_size": 2718,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +291,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 18063,
+				"buffer_size": 17455,
 				"line_ending": "Unix"
 			}
 		}
@@ -275,9 +299,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 307.0,
 		"selected_items":
 		[
+			[
+				"pref",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"com",
+				"Sort via CSScomb"
+			],
 			[
 				"css",
 				"Set Syntax: CSS"
@@ -411,7 +443,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -428,13 +460,19 @@
 	},
 	"file_history":
 	[
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/style.scss",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_font-awesome.scss",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/.htaccess",
+		"/Users/Mirko/Downloads/Preview/README.md",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/img/banner_mob.png",
+		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/font-awesome.scss",
+		"/Users/Mirko/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/js/main2.js",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/js/main.js",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_mq_48em.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_media-queries",
-		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/fonts/FortAwesome-Font-Awesome-13d5dd3/sass/font-awesome.sass",
-		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/style.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/.gitignore",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/sass/_normalize.scss",
 		"/Volumes/AREA-1/02.2_Projekte/GGS Aldenhoven/Website/code/static/css/type.css",
@@ -491,6 +529,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"10%",
+			"30%",
+			"30",
+			"0",
+			"-15%",
+			"banner",
+			"50",
+			".1",
+			"1",
+			"top",
+			"url(/img",
+			"90% 30% ",
+			"20",
+			"navtext",
+			"Datenschutzerklärung",
+			"Impressum",
+			"60",
+			"tranform",
+			"transform",
+			"linear",
+			"ease",
 			" class=\"mobsubnav\"",
 			" class=\"mobtoplink\"",
 			" class=\"mobtopnavitem\"",
@@ -546,7 +605,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -554,15 +613,15 @@
 					"file": "sass/style.scss",
 					"settings":
 					{
-						"buffer_size": 13165,
+						"buffer_size": 15561,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								475,
-								475
+								5741,
+								5741
 							]
 						],
 						"settings":
@@ -572,7 +631,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5009.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -582,15 +641,15 @@
 					"file": "sass/_mq-20em.scss",
 					"settings":
 					{
-						"buffer_size": 4292,
+						"buffer_size": 11199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								95,
-								95
+								9675,
+								9694
 							]
 						],
 						"settings":
@@ -600,7 +659,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5285.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -643,8 +702,8 @@
 						"selection":
 						[
 							[
-								76,
-								76
+								3316,
+								3254
 							]
 						],
 						"settings":
@@ -654,7 +713,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2426.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -671,8 +730,8 @@
 						"selection":
 						[
 							[
-								611,
-								611
+								722,
+								738
 							]
 						],
 						"settings":
@@ -691,7 +750,7 @@
 					"file": "css/style.css",
 					"settings":
 					{
-						"buffer_size": 45897,
+						"buffer_size": 56429,
 						"regions":
 						{
 						},
@@ -719,20 +778,21 @@
 					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 504,
+						"buffer_size": 2718,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								504,
-								504
+								2717,
+								2717
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -751,19 +811,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 18063,
+						"buffer_size": 17455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17256,
-								17256
-							],
-							[
-								17601,
-								17601
+								6901,
+								6911
 							]
 						],
 						"settings":
@@ -773,7 +829,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6209.0,
+						"translation.y": 1911.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -809,7 +865,7 @@
 		"cols":
 		[
 			0.0,
-			0.492347164557,
+			0.504965235848,
 			1.0
 		],
 		"rows":

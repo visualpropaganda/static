@@ -120,6 +120,8 @@ $column: 31.575520833333332%;
 // Typography (Typeface,Vertical Rhythm and Scale)
 @import "modular-scale.scss";
 
+body {font-family: Tahoma, Verdana, Segoe, sans-serif; }
+
 h1,h2,h3,h4,h5,h6,p {
     text-rendering: optimizeLegibility;
     line-height: $line-height-base; /* 1.5rem */
@@ -202,10 +204,12 @@ body {
     background: $bg_html;
 }
 
-#headermeta, #mainnav, #hero, {
+#headermeta, #mainnav, #content,  {
     width: 96%;
     margin: 0 auto;
 }
+
+#content li {list-style: none;}
 
 a {
     text-decoration: none;
@@ -216,13 +220,6 @@ a {
         background: transparent;
         color: $hover;
         border-bottom: 1px solid $hover;
-    }
-}
-
-#content {
-    padding: 0 $gutter;
-    li {
-        list-style: none;
     }
 }
 
@@ -306,9 +303,13 @@ form.search button.btn-search:active {
 
 // F R O N T P A G E
 // Slider
-#hero .flexslider {
-    margin: 1rem auto 4rem;
-    border: 0;
+#hero {
+    width: 96%;
+    margin: 0 auto;
+    .flexslider {
+        margin: 1rem 4rem;
+        border: 0;
+    }
 }
 
 #hero .flex-control-nav {
@@ -374,15 +375,15 @@ header[role="heading"] {
     margin-bottom: 1.5rem;
 }
 
-#events .date {
+.date {
     margin-bottom: 0;
-    li.day-month {
+    .day-month {
         color: $textmeta;
         font-weight: bold;
         font-size: 1.25rem; /* 20px */
         line-height: 0.75em;
         }
-    li.year {
+    .year {
         font-style: italic;
         color: $textmeta;
         font-size: 1rem;  /* 16px */
